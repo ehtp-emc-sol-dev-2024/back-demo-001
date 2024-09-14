@@ -1,26 +1,23 @@
 const express = require('express');
 const app = express();
 
- 
+const consultants = [
+    { "id" : 1, "firstName" : "John", "lastName" : "Doe", "CIN" : "A123456", "skills" : [ "Java", "Python", "Azure" ] },
+    { "id" : 2, "firstName" : "Jane", "lastName" : "Smith", "CIN" : "B654321", "skills" : [ "JavaScript", "React", "Node.js" ] },
+    { "id" : 3, "firstName" : "Sam", "lastName" : "Green", "CIN" : "C987654", "skills" : [ "SQL", "MongoDB", "Docker" ] }
+  ];
 
-app.get('/consultants', (req, res) => { 
+app.get('/consultants', (req, res) => {
 
-  const consultants = [ 
+  res.json(consultants);
+});
 
-    { id: 1, firstName: 'Ahmed', lastName: 'El Haddad', CIN: 'A123456' }, 
 
-    { id: 2, firstName: 'Fatima', lastName: 'Ben Ali', CIN: 'B654321' } 
+app.get('/consultants/:id', async (req, res) => {
+    consultant =    { "id" : 3, "firstName" : "Sam", "lastName" : "Green", "CIN" : "C987654", "skills" : [ "AWS", "SQL", "MongoDB", "Docker" ] } ;
+   res.json(consultant);
+});
 
-  ]; 
-
-  res.json(consultants); 
-
-}); 
-
- 
-
-app.listen(process.env.PORT || 3000, () => { 
-
-  console.log('Server running'); 
-
-}); 
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server running');
+});
