@@ -19,7 +19,7 @@ app.get('/consultants', (req, res) => {
 }); 
 
 app.get('/consultants/:id', async (req, res) => {
-    consultant =    { "id" : 3, "firstName" : "Sam", "lastName" : "Green", "CIN" : "C987654", "skills" : [ "AWS", "SQL", "MongoDB", "Docker" ] } ;
+   consultant =    { "id" : 3, "firstName" : "Sam", "lastName" : "Green", "CIN" : "C987654", "skills" : [ "AWS", "SQL", "MongoDB", "Docker" ] } ;
    res.json(consultant);
 });
 
