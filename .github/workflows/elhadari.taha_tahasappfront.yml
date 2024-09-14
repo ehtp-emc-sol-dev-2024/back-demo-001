@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'tahasappfront'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C050ED74E84449EFAF7E1741A95C46FE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15C4B37891184F0D8BC2CFBB74271CB1 }}
           package: .
