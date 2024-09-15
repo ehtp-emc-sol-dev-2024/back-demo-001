@@ -6,6 +6,10 @@ const uri = "mongodb://back-demo-001-server:u7I0FGnwNeP2VKwy6e5AMo5FKNWAfxXTyLwI
 const client = new MongoClient(uri);
 const DATABASE_NAME = 'consultants-db'; 
 
+app.get('/health-check', async (req, res) => {
+   res.status(202).send('OK')
+});
+
 app.get('/consultants', async (req, res) => {
   try {
     await client.connect();
